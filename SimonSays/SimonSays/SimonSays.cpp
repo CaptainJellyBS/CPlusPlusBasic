@@ -5,7 +5,7 @@
 #include <chrono>
 #include <thread>
 using namespace std::this_thread;
-using namespace std::chrono; // nanoseconds, system_clock, seconds
+using namespace std::chrono;
 
 void simonSays(int i);
 int appendRandom(int i);
