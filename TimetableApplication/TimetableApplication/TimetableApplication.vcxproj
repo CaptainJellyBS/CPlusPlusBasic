@@ -139,7 +139,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Classroom.cpp" />
+    <ClCompile Include="Course.cpp" />
+    <ClCompile Include="Lesson.cpp" />
+    <ClCompile Include="Student.cpp" />
+    <ClCompile Include="Teacher.cpp" />
+    <ClCompile Include="TimeTable.cpp" />
     <ClCompile Include="TimetableApplication.cpp" />
+    <ClCompile Include="TimeTableManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Classroom.h" />
+    <ClInclude Include="Course.h" />
+    <ClInclude Include="Lesson.h" />
+    <ClInclude Include="Student.h" />
+    <ClInclude Include="Teacher.h" />
+    <ClInclude Include="TimeTable.h" />
+    <ClInclude Include="TimeTableManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
