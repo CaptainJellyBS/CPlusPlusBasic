@@ -3,6 +3,12 @@
 //I wanted to do fancy getters and setters so the name is always colour + name.
 //But then C++ decided to not have those in a simple way so I just made functions myself
 
+ColouredObject::ColouredObject()
+{
+	colour = "grey";
+	name = "PLACEHOLDER";
+}
+
 void ColouredObject::setName(std::string n)
 {
 	name = n;

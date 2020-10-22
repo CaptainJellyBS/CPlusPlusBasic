@@ -1,5 +1,10 @@
 #pragma once
-class Socks
+#include "ColouredObject.h"
+
+class Socks : ColouredObject
 {
+public:
+	Socks(std::string n);
+	Socks(const Socks& c);
 };
 

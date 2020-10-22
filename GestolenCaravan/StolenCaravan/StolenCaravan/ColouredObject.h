@@ -3,12 +3,13 @@
 class ColouredObject
 {
 public:
+	ColouredObject();
 	void setName(std::string n);
 	void setColour(std::string c);
 	
 	std::string getName();
 
-private:
+protected:
 	std::string name;
 	std::string colour;
 };
