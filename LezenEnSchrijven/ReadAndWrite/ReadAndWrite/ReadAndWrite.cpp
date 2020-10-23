@@ -2,12 +2,12 @@
 #include <fstream>
 #include <string>
 
-#define inReverseFile "E:/Documents/HKU/2021(Year2)/CPlusPlusBasic/LezenEnSchrijven/ReadAndWrite/ReadAndWrite/test.txt"
-#define outReverseFile "E:/Documents/HKU/2021(Year2)/CPlusPlusBasic/LezenEnSchrijven/ReadAndWrite/ReadAndWrite/test2.txt"
+#define inReverseFile "[yourFilePath]/test.txt"
+#define outReverseFile "[yourFilePath]/test2.txt"
 
-#define inCombineFile1 "E:/Documents/HKU/2021(Year2)/CPlusPlusBasic/LezenEnSchrijven/ReadAndWrite/ReadAndWrite/inCombineFile1.txt"
-#define inCombineFile2 "E:/Documents/HKU/2021(Year2)/CPlusPlusBasic/LezenEnSchrijven/ReadAndWrite/ReadAndWrite/inCombineFile2.txt"
-#define outCombineFile "E:/Documents/HKU/2021(Year2)/CPlusPlusBasic/LezenEnSchrijven/ReadAndWrite/ReadAndWrite/outCombineFile.txt"
+#define inCombineFile1 "[yourFilePath]/inCombineFile1.txt"
+#define inCombineFile2 "[yourFilePath]/inCombineFile2.txt"
+#define outCombineFile "[yourFilePath]/outCombineFile.txt"
 
 void reverseFile(std::ifstream& in, std::ofstream& out);
 void combineFile(std::ifstream& in1, std::ifstream& in2, std::ofstream& out);
@@ -49,13 +49,33 @@ int main()
 	outStream.close();
 }
 
+/// <summary>
+/// Read a file, and write it to an output file in reverse. I don't know why, but if there's newlines in the original file, it puts two newlines in the output.
+/// </summary>
+/// <param name="in"></param>
+/// <param name="out"></param>
 void reverseFile(std::ifstream& in, std::ofstream& out)
 {
 	char t;
+	unsigned int i = 1;
+
+	unsigned int length = 0;
+
+	in.seekg(0, std::ios_base::end);
+	length = in.tellg();
+
+	std::cout << length << std::endl;
+
+	in.seekg(length - i);
+
 	while (in.get(t))
 	{
 		out.put(t);
+		i++;
+		in.seekg(length-i);
 	}
+
+
 }
 
 /// <summary>
