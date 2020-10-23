@@ -2,12 +2,18 @@
 #include "ColouredObject.h"
 #include "Socks.h"
 
-class Suitcase : ColouredObject
+class Suitcase : public ColouredObject
 {
 public:
-	Suitcase(std::string n);
+	Suitcase();
 	Suitcase(const Suitcase& c);
 	~Suitcase();
+	
+	Suitcase& operator=(const Suitcase& c);
 	Socks* socks;
+	
+	void AddSocks(Socks* s);
+
+	std::string parse() override;
 };
 

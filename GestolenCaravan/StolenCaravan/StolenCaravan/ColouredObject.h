@@ -8,6 +8,7 @@ public:
 	void setColour(std::string c);
 	
 	std::string getName();
+	virtual std::string parse();
 
 protected:
 	std::string name;

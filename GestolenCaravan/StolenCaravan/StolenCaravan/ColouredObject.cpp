@@ -23,3 +23,8 @@ std::string ColouredObject::getName()
 {
 	return colour + " " + name;
 }
+
+std::string ColouredObject::parse()
+{
+	return getName();
+}

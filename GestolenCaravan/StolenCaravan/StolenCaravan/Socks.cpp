@@ -1,6 +1,6 @@
 #include "Socks.h"
 
-Socks::Socks(const Socks& c)
+Socks::Socks() : ColouredObject()
 {
-
+	setName("socks");
 }
